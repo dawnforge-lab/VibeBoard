@@ -1,0 +1,313 @@
+# VibeBoard — Git Ignore Configuration
+
+# ============================================
+# Dependencies
+# ============================================
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# ============================================
+# Testing
+# ============================================
+coverage/
+*.lcov
+.nyc_output
+test-results/
+playwright-report/
+playwright/.cache/
+
+# ============================================
+# Next.js (Web)
+# ============================================
+.next/
+out/
+build/
+dist/
+.vercel
+
+# Next.js build output
+.next/cache/
+.next/standalone/
+.next/static/
+
+# PWA assets
+public/sw.js
+public/workbox-*.js
+public/worker-*.js
+public/fallback-*.js
+
+# ============================================
+# React Native / Expo (Mobile)
+# ============================================
+.expo/
+.expo-shared/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# Expo
+.expo
+.expo-shared
+expo-env.d.ts
+
+# Metro
+.metro-health-check*
+
+# EAS
+eas-build-*.tar.gz
+
+# ============================================
+# Environment Variables
+# ============================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# Keep example file
+!.env.example
+
+# ============================================
+# Logs
+# ============================================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ============================================
+# OS Files
+# ============================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============================================
+# IDE & Editor Files
+# ============================================
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains (WebStorm, IntelliJ, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+Sessionx.vim
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+
+# ============================================
+# Build Artifacts
+# ============================================
+*.tsbuildinfo
+.turbo/
+.cache/
+tmp/
+temp/
+
+# ============================================
+# Database
+# ============================================
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+.supabase/
+
+# ============================================
+# Misc
+# ============================================
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# TypeScript cache
+*.tsbuildinfo
+.eslintcache
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache
+.parcel-cache
+
+# Storybook build outputs
+.out
+.storybook-out
+storybook-static
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# Railway
+.railway/
+
+# Sentry
+.sentryclirc
+
+# Turborepo
+.turbo
+
+# Contentlayer
+.contentlayer
+
+# ============================================
+# Project-Specific
+# ============================================
+# Font packs (if generated)
+# Uncomment if font packs are generated, not committed
+# data/packs/generated/
+
+# Admin uploads
+uploads/
+*.uploaded
+
+# User-generated content (if stored locally in dev)
+user-content/
+
+# Analytics data (if stored locally)
+analytics-cache/
+
+# ============================================
+# Security
+# ============================================
+# Never commit these
+*.pem
+*.cer
+*.crt
+*.key
+*.keystore
+secrets.json
+credentials.json
+service-account.json
+
+# ============================================
+# Temporary Files
+# ============================================
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.orig
+
+# ============================================
+# Documentation Build
+# ============================================
+# If using tools like Docusaurus, VitePress, etc.
+.docusaurus/
+.vitepress/dist/
+
+# ============================================
+# Package Manager Locks (Optional)
+# ============================================
+# Uncomment if you want to ignore lock files
+# Note: It's generally recommended to commit lock files
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# ============================================
+# AI / ML Models (if any)
+# ============================================
+*.model
+*.h5
+*.pkl
+*.joblib
+models/checkpoints/
+
+# ============================================
+# End of .gitignore
+# ============================================

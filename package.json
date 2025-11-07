@@ -1,0 +1,93 @@
+{
+  "name": "vibeboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Text Styler - Transform plain text into aesthetic Unicode styles",
+  "author": "VibeBoard Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/vibeboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/vibeboard/issues"
+  },
+  "homepage": "https://vibeboard.app",
+  "keywords": [
+    "text-styler",
+    "unicode",
+    "fonts",
+    "aesthetic",
+    "social-media",
+    "instagram",
+    "tiktok"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "dev:web": "pnpm --filter @vibeboard/web dev",
+    "dev:mobile": "pnpm --filter @vibeboard/mobile start",
+    "build": "turbo run build",
+    "build:web": "pnpm --filter @vibeboard/web build",
+    "build:mobile": "pnpm --filter @vibeboard/mobile build",
+    "test": "turbo run test",
+    "test:unit": "vitest",
+    "test:e2e": "playwright test",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint -- --fix",
+    "type-check": "turbo run type-check",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "clean": "turbo run clean && rm -rf node_modules .turbo",
+    "validate-packs": "tsx scripts/validate-packs.ts",
+    "db:migrate": "supabase migration up",
+    "db:seed": "supabase db seed",
+    "db:reset": "supabase db reset",
+    "prepare": "husky install",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=./packages/* && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@playwright/test": "^1.42.1",
+    "@types/node": "^20.11.30",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.1.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "tsx": "^4.7.1",
+    "turbo": "^1.13.0",
+    "typescript": "^5.4.3",
+    "vitest": "^1.4.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "pnpm": {
+    "overrides": {
+      "typescript": "^5.4.3"
+    }
+  }
+}

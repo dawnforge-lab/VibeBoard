@@ -1,0 +1,9 @@
+# pnpm Workspace Configuration
+# Defines packages in the VibeBoard monorepo
+
+packages:
+  # All packages in the packages directory
+  - 'packages/*'
+
+  # Include root package
+  - '.'
