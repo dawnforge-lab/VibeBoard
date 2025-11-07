@@ -7,7 +7,6 @@ import { FontPack, ValidationResult } from '../models';
 
 export class FontPackManager {
   private packs: Map<string, FontPack> = new Map();
-  private loading: boolean = false;
 
   /**
    * Load a single font pack
@@ -27,13 +26,8 @@ export class FontPackManager {
    * Load multiple font packs
    */
   async loadPacks(packs: FontPack[]): Promise<void> {
-    this.loading = true;
-    try {
-      for (const pack of packs) {
-        await this.loadPack(pack);
-      }
-    } finally {
-      this.loading = false;
+    for (const pack of packs) {
+      await this.loadPack(pack);
     }
   }
 
@@ -84,11 +78,14 @@ export class FontPackManager {
     if (!pack.id) errors.push('Pack missing id');
     if (!pack.name) errors.push('Pack missing name');
     if (!pack.version) errors.push('Pack missing version');
-    if (!Array.isArray(pack.styles)) errors.push('Pack missing styles array');
+    if (!Array.isArray(pack.styles) || pack.styles.length === 0)
+      errors.push('Pack missing styles array');
 
     // Validate each style
     const requiredChars = new Set(
-      'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,!?'.split('')
+      'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,!?'.split(
+        ''
+      )
     );
 
     pack.styles?.forEach((style) => {
