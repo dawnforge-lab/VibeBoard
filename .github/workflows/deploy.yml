@@ -31,8 +31,11 @@ jobs:
       - name: Run tests
         run: pnpm test || echo "Tests not yet implemented"
 
+      - name: Build core package
+        run: pnpm --filter @vibeboard/core build
+
       - name: Build web package
-        run: pnpm build:web
+        run: pnpm --filter @vibeboard/web build
 
       - name: Deploy to Railway
         run: |

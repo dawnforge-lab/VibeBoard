@@ -2,8 +2,8 @@
 
 import { useMemo, useEffect, useState } from 'react';
 import { useAppStore } from '@/store/appStore';
-import { StyleEngine, FontPackManager, StyledResult } from '@vibeboard/core';
-import defaultPack from '../../../data/packs/default.json';
+import { StyleEngine, FontPackManager, type FontPack } from '@vibeboard/core';
+import defaultPackData from '../../../data/packs/default.json';
 
 const DEFAULT_STYLE_IDS = [
   'bold-sans',
@@ -26,8 +26,9 @@ export function useStyles() {
   // Initialize engine with default pack
   useEffect(() => {
     const packManager = new FontPackManager();
-    packManager.loadPack(defaultPack as any).then(() => {
-      styleEngine.loadPack(defaultPack as any);
+    const defaultPack = defaultPackData as FontPack;
+    packManager.loadPack(defaultPack).then(() => {
+      styleEngine.loadPack(defaultPack);
       setInitialized(true);
     });
   }, [styleEngine]);

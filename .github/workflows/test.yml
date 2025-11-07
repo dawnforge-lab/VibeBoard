@@ -86,8 +86,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --ignore-scripts
 
+      - name: Build core package
+        run: pnpm --filter @vibeboard/core build
+
       - name: Build web package
-        run: pnpm build:web
+        run: pnpm --filter @vibeboard/web build
 
       - name: Check bundle size
         run: |
