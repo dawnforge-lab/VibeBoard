@@ -676,7 +676,7 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks:**
 
-- [ ] Configure iOS bundle identifier in app.json
+- [x] Configure iOS bundle identifier in app.json (completed in Story 4.1)
 - [ ] Setup Apple Developer Account
 - [ ] Generate provisioning profiles (EAS handles)
 - [ ] Run: `eas build --platform ios`
@@ -696,7 +696,7 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks:**
 
-- [ ] Configure Android package in app.json
+- [x] Configure Android package in app.json (completed in Story 4.1)
 - [ ] Setup Google Play Developer Account
 - [ ] Generate keystore (EAS handles)
 - [ ] Run: `eas build --platform android`
