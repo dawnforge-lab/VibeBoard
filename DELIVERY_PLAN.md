@@ -554,7 +554,7 @@ Build a cross-platform application that transforms plain text into stylized Unic
 **Dependencies:** Epic 2, Epic 3
 **Team:** Mobile
 
-### Story 4.1: Expo Project Setup
+### Story 4.1: Expo Project Setup ✅ COMPLETED
 
 **Estimate:** 1 day
 **Acceptance Criteria:**
@@ -565,16 +565,16 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks:**
 
-- [ ] Create packages/mobile/ with Expo
-- [ ] Initialize: `npx create-expo-app`
-- [ ] Configure app.json (name, slug, bundle IDs)
-- [ ] Install dependencies: expo, react-native, zustand
-- [ ] Link @vibeboard/core package
-- [ ] Setup NativeWind for Tailwind-like styling
-- [ ] Test on iOS simulator and Android emulator
-- [ ] Configure EAS Build: `eas build:configure`
+- [x] Create packages/mobile/ with Expo
+- [x] Initialize: `npx create-expo-app`
+- [x] Configure app.json (name, slug, bundle IDs)
+- [x] Install dependencies: expo, react-native, zustand
+- [x] Link @vibeboard/core package
+- [x] Setup NativeWind for Tailwind-like styling
+- [x] Test on iOS simulator and Android emulator
+- [x] Configure EAS Build: `eas build:configure`
 
-### Story 4.2: Main App Shell (Tabs Navigation)
+### Story 4.2: Main App Shell (Tabs Navigation) ✅ COMPLETED
 
 **Estimate:** 2 days
 **Acceptance Criteria:**
@@ -585,15 +585,15 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks:**
 
-- [ ] Setup Expo Router with app/ directory
-- [ ] Create app/(tabs)/\_layout.tsx
-- [ ] Add tab screens: index.tsx, saved.tsx, packs.tsx, settings.tsx
-- [ ] Configure tab bar icons and labels
-- [ ] Style tab bar (dark theme)
-- [ ] Test navigation between tabs
-- [ ] Add safe area handling (iOS notch)
+- [x] Setup Expo Router with app/ directory
+- [x] Create app/(tabs)/\_layout.tsx
+- [x] Add tab screens: index.tsx, saved.tsx, packs.tsx, settings.tsx
+- [x] Configure tab bar icons and labels
+- [x] Style tab bar (dark theme)
+- [x] Test navigation between tabs
+- [x] Add safe area handling (iOS notch)
 
-### Story 4.3: Mobile Text Lab Component
+### Story 4.3: Mobile Text Lab Component ✅ COMPLETED
 
 **Estimate:** 2 days
 **Acceptance Criteria:**
@@ -604,15 +604,15 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks:**
 
-- [ ] Create components/TextLab.tsx (mobile version)
-- [ ] Use TextInput from react-native
-- [ ] Share useStyles hook from @vibeboard/core
-- [ ] Add keyboard dismiss on scroll
-- [ ] Style for iOS and Android
-- [ ] Test on physical devices
-- [ ] Handle keyboard avoiding view
+- [x] Create components/TextLab.tsx (mobile version)
+- [x] Use TextInput from react-native
+- [x] Share useStyles hook from @vibeboard/core
+- [x] Add keyboard dismiss on scroll
+- [x] Style for iOS and Android
+- [x] Test on physical devices
+- [x] Handle keyboard avoiding view
 
-### Story 4.4: Mobile Preview Grid
+### Story 4.4: Mobile Preview Grid ✅ COMPLETED
 
 **Estimate:** 2 days
 **Acceptance Criteria:**
@@ -623,14 +623,14 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks:**
 
-- [ ] Create components/PreviewGrid.tsx (mobile)
-- [ ] Use FlatList for performance
-- [ ] Implement 2-column layout
-- [ ] Reuse StyleTile component (mobile version)
-- [ ] Add pull-to-refresh
-- [ ] Test with 50+ styles (performance)
+- [x] Create components/PreviewGrid.tsx (mobile)
+- [x] Use FlatList for performance
+- [x] Implement 2-column layout
+- [x] Reuse StyleTile component (mobile version)
+- [ ] Add pull-to-refresh (deferred)
+- [x] Test with 50+ styles (performance)
 
-### Story 4.5: Native Share Integration
+### Story 4.5: Native Share Integration ✅ COMPLETED
 
 **Estimate:** 1 day
 **Acceptance Criteria:**
@@ -641,14 +641,14 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks:**
 
-- [ ] Create hooks/useNativeShare.ts
-- [ ] Use Share API from react-native
-- [ ] Format share message with attribution
-- [ ] Test sharing to multiple apps
-- [ ] Track share events in analytics
-- [ ] Handle share errors gracefully
+- [x] Create hooks/useNativeShare.ts
+- [x] Use Share API from react-native
+- [x] Format share message with attribution
+- [x] Test sharing to multiple apps
+- [ ] Track share events in analytics (deferred to Epic 7)
+- [x] Handle share errors gracefully
 
-### Story 4.6: Favorites & Local Storage (Mobile)
+### Story 4.6: Favorites & Local Storage (Mobile) ✅ COMPLETED
 
 **Estimate:** 1 day
 **Acceptance Criteria:**
@@ -659,11 +659,11 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks:**
 
-- [ ] Implement AsyncStorageAdapter in @vibeboard/core
-- [ ] Load favorites on app launch
-- [ ] Save favorites on toggle
-- [ ] Test with app restart
-- [ ] Handle storage quota exceeded
+- [x] Implement AsyncStorageAdapter in @vibeboard/core
+- [x] Load favorites on app launch
+- [x] Save favorites on toggle
+- [x] Test with app restart
+- [x] Handle storage quota exceeded
 
 ### Story 4.7: iOS Build & TestFlight
 
