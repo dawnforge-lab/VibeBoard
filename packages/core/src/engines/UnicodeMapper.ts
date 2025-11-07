@@ -29,7 +29,8 @@ export class UnicodeMapper {
    * Validate that mapping covers all required characters
    */
   validateMapping(): boolean {
-    const requiredChars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,!?';
+    const requiredChars =
+      'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,!?';
     const mappedChars = new Set(Object.keys(this.mapping));
 
     for (const char of requiredChars) {
@@ -39,13 +40,6 @@ export class UnicodeMapper {
     }
 
     return true;
-  }
-
-  /**
-   * Get fallback character (identity function)
-   */
-  private getFallback(char: string): string {
-    return char;
   }
 
   /**

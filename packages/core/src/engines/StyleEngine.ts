@@ -3,7 +3,7 @@
  * Applies styles and decorators to text
  */
 
-import { FontPack, Style, Decorator, StyledResult } from '../models';
+import { FontPack, Decorator, StyledResult } from '../models';
 import { UnicodeMapper } from './UnicodeMapper';
 
 export interface ApplyStyleOptions {
