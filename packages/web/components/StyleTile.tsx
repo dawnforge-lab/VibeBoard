@@ -33,6 +33,26 @@ export default function StyleTile({ styled }: Props) {
     }
   };
 
+  const handleShare = async () => {
+    // Check if Web Share API is supported
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'VibeBoard - Styled Text',
+          text: styled.styled,
+        });
+      } catch (error) {
+        // User cancelled or error occurred - this is normal
+        if (error instanceof Error && error.name !== 'AbortError') {
+          console.error('Share failed:', error);
+        }
+      }
+    } else {
+      // Fallback to copy if share not supported
+      handleCopy();
+    }
+  };
+
   const handleToggleFavorite = () => {
     toggleFavorite(styled.styleId);
   };
@@ -68,8 +88,18 @@ export default function StyleTile({ styled }: Props) {
         >
           {copied ? (
             <span className="flex items-center justify-center gap-1">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 13l4 4L19 7"
+                />
               </svg>
               Copied!
             </span>
@@ -79,13 +109,24 @@ export default function StyleTile({ styled }: Props) {
         </button>
 
         <button
+          onClick={handleShare}
+          className="px-3 py-2 rounded-lg text-sm bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 hover:bg-purple-200 dark:hover:bg-purple-900/50 transition-all"
+          aria-label="Share"
+          title="Share"
+        >
+          📤
+        </button>
+
+        <button
           onClick={handleToggleFavorite}
           className={`px-3 py-2 rounded-lg text-sm transition-all ${
             isFavorited
               ? 'bg-red-100 dark:bg-red-900/30 text-red-500'
               : 'bg-gray-100 dark:bg-gray-800 text-gray-500 hover:bg-gray-200 dark:hover:bg-gray-700'
           }`}
-          aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
+          aria-label={
+            isFavorited ? 'Remove from favorites' : 'Add to favorites'
+          }
         >
           {isFavorited ? '❤️' : '🤍'}
         </button>
