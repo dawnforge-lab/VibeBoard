@@ -87,12 +87,18 @@ importers:
 
   packages/mobile:
     dependencies:
+      '@react-native-async-storage/async-storage':
+        specifier: ^2.1.0
+        version: 2.2.0(react-native@0.76.5)
       '@vibeboard/core':
         specifier: workspace:*
         version: link:../core
       expo:
         specifier: ~52.0.0
         version: 52.0.47(@babel/core@7.28.5)(@babel/preset-env@7.28.5)(react-native@0.76.5)(react@18.3.1)
+      expo-clipboard:
+        specifier: ~7.0.0
+        version: 7.0.1(expo@52.0.47)(react-native@0.76.5)(react@18.3.1)
       expo-constants:
         specifier: ~17.0.0
         version: 17.0.8(expo@52.0.47)(react-native@0.76.5)
@@ -2360,7 +2366,7 @@ packages:
 
   /@expo/bunyan@4.0.1:
     resolution: {integrity: sha512-+Lla7nYSiHZirgK+U/uYzsLv/X+HaJienbD5AKX1UQZHYfWaP+9uuQluRB4GrEVWF0GZ7vEVp/jzaOT9k/SQlg==}
-    engines: {node: '>=0.10.0'}
+    engines: {'0': node >=0.10.0}
     dependencies:
       uuid: 8.3.2
     dev: false
@@ -3069,6 +3075,15 @@ packages:
       '@babel/runtime': 7.28.4
       '@radix-ui/react-compose-refs': 1.0.0(react@18.3.1)
       react: 18.3.1
+    dev: false
+
+  /@react-native-async-storage/async-storage@2.2.0(react-native@0.76.5):
+    resolution: {integrity: sha512-gvRvjR5JAaUZF8tv2Kcq/Gbt3JHwbKFYfmb445rhOj6NUMx3qPLixmDx5pZAyb9at1bYvJ4/eTUipU5aki45xw==}
+    peerDependencies:
+      react-native: ^0.0.0-0 || >=0.65 <1.0
+    dependencies:
+      merge-options: 3.0.4
+      react-native: 0.76.5(@babel/core@7.28.5)(@babel/preset-env@7.28.5)(@types/react@18.3.26)(react@18.3.1)
     dev: false
 
   /@react-native/assets-registry@0.76.5:
@@ -6146,6 +6161,18 @@ packages:
       - supports-color
     dev: false
 
+  /expo-clipboard@7.0.1(expo@52.0.47)(react-native@0.76.5)(react@18.3.1):
+    resolution: {integrity: sha512-rqYk0+WoqitPcPKxmMxSpLonX1E5Ije3LBYfnYMbH3xU5Gr8EAH9QnOWOi4BgahUPvcot6nbFEnx+DqARrmxKQ==}
+    peerDependencies:
+      expo: '*'
+      react: '*'
+      react-native: '*'
+    dependencies:
+      expo: 52.0.47(@babel/core@7.28.5)(@babel/preset-env@7.28.5)(react-native@0.76.5)(react@18.3.1)
+      react: 18.3.1
+      react-native: 0.76.5(@babel/core@7.28.5)(@babel/preset-env@7.28.5)(@types/react@18.3.26)(react@18.3.1)
+    dev: false
+
   /expo-constants@17.0.8(expo@52.0.47)(react-native@0.76.5):
     resolution: {integrity: sha512-XfWRyQAf1yUNgWZ1TnE8pFBMqGmFP5Gb+SFSgszxDdOoheB/NI5D4p7q86kI2fvGyfTrxAe+D+74nZkfsGvUlg==}
     peerDependencies:
@@ -7212,6 +7239,11 @@ packages:
     resolution: {integrity: sha512-Fd4gABb+ycGAmKou8eMftCupSir5lRxqf4aD/vd0cD2qc4HL07OjCeuHMr8Ro4CoMaeCKDB0/ECBOVWjTwUvPQ==}
     engines: {node: '>=8'}
 
+  /is-plain-obj@2.1.0:
+    resolution: {integrity: sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==}
+    engines: {node: '>=8'}
+    dev: false
+
   /is-plain-object@2.0.4:
     resolution: {integrity: sha512-h5PpgXkWitc38BBMYawTYMWJHFZJVnBquFE57xFpjB8pJFiF6gZ+bU+WyI/yqXiFR5mdLsgYNaPe8uao6Uv9Og==}
     engines: {node: '>=0.10.0'}
@@ -7965,6 +7997,13 @@ packages:
 
   /memoize-one@5.2.1:
     resolution: {integrity: sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q==}
+    dev: false
+
+  /merge-options@3.0.4:
+    resolution: {integrity: sha512-2Sug1+knBjkaMsMgf1ctR1Ujx+Ayku4EdJN4Z+C2+JzoeF7A3OZ9KM2GY0CpQS51NR61LTurMJrRKPhSs3ZRTQ==}
+    engines: {node: '>=10'}
+    dependencies:
+      is-plain-obj: 2.1.0
     dev: false
 
   /merge-stream@2.0.0:
