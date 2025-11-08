@@ -920,7 +920,7 @@ Build a cross-platform application that transforms plain text into stylized Unic
 }
 ```
 
-### Story 5.5.5: AI Prompts Editor ⚡ Priority: Critical
+### Story 5.5.5: AI Prompts Editor ⚡ Priority: Critical ✅ COMPLETED
 
 **Estimate:** 3 days
 **Acceptance Criteria:**
@@ -932,23 +932,23 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks:**
 
-- [ ] Create /admin/ai-prompts page
-- [ ] Build prompt list view with search
-- [ ] Create prompt editor modal with Monaco editor
-- [ ] Add model selector (gpt-4o, gpt-4o-mini, claude-3-sonnet)
-- [ ] Add temperature and max_tokens controls
-- [ ] Implement "Test Prompt" with sample data
-- [ ] Show cost estimate per prompt execution
-- [ ] Add version control (create new version, rollback)
-- [ ] Implement A/B testing: enable multiple prompts with split percentage
-- [ ] Track prompt performance metrics (acceptance rate, cost)
-- [ ] Add prompt templates library
-- [ ] Document prompt variables format
+- [x] Create /admin/ai-prompts page
+- [x] Build prompt list view with search
+- [x] Create prompt editor modal with Monaco editor
+- [x] Add model selector (gpt-4o, gpt-4o-mini, claude-3-sonnet)
+- [x] Add temperature and max_tokens controls
+- [x] Implement "Test Prompt" with sample data
+- [x] Show cost estimate per prompt execution
+- [x] Add version control (create new version, rollback)
+- [x] Implement A/B testing: enable multiple prompts with split percentage
+- [ ] Track prompt performance metrics (acceptance rate, cost) - deferred
+- [ ] Add prompt templates library - deferred
+- [ ] Document prompt variables format - deferred
 
 **Tasks for Client Integration:**
 
-- [ ] Create API endpoint: GET /api/ai/prompt/:key
-- [ ] Implement prompt caching (60s TTL)
+- [x] Create API endpoint: GET /api/ai/prompt/:key
+- [x] Implement prompt caching (60s TTL)
 - [ ] Update AI suggestion route to fetch from database
 - [ ] Handle fallback if prompt not found
 
