@@ -1005,8 +1005,8 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks for Client Integration:**
 
-- [ ] Create utility: checkFeatureFlag(key, userId)
-- [ ] Implement percentage-based rollout logic
+- [x] Create utility: checkFeatureFlag(key, userId)
+- [x] Implement percentage-based rollout logic
 - [ ] Cache flags locally (5 min TTL)
 - [ ] Add feature flag checks throughout app
 - [ ] Test gradual rollout (10% → 50% → 100%)
@@ -1063,7 +1063,7 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks for Client Integration:**
 
-- [ ] Create API endpoint: GET /api/notifications/active
+- [x] Create API endpoint: GET /api/notifications/active
 - [ ] Display notifications in app header or modal
 - [ ] Track notification dismissals
 - [ ] Respect user dismissal (don't show again)
@@ -1100,9 +1100,9 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks:**
 
-- [ ] Create API route: GET /api/config
-- [ ] Fetch configs from app_config table
-- [ ] Transform to key-value object
+- [x] Create API route: GET /api/config
+- [x] Fetch configs from app_config table
+- [x] Transform to key-value object
 - [ ] Add caching headers (60s TTL)
 - [ ] Implement client-side caching (React Query or SWR)
 - [ ] Add fallback to hardcoded defaults if API fails
