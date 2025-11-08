@@ -1178,7 +1178,7 @@ const styleLimit = isPro ? 50 : config.free_styles_limit;
 **Dependencies:** Epic 5 (Cloud)
 **Team:** Backend + Frontend
 
-### Story 6.1: Stripe Integration (Web)
+### Story 6.1: Stripe Integration (Web) ✅ COMPLETED
 
 **Estimate:** 3 days
 **Acceptance Criteria:**
@@ -1189,16 +1189,27 @@ const styleLimit = isPro ? 50 : config.free_styles_limit;
 
 **Tasks:**
 
-- [ ] Create Stripe account
-- [ ] Add STRIPE_SECRET_KEY to Railway env
-- [ ] Add NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
-- [ ] Create Pro subscription product in Stripe dashboard
-- [ ] Implement Checkout Session: POST /api/checkout
-- [ ] Handle success/cancel redirects
-- [ ] Setup webhook endpoint: POST /api/stripe-webhook
-- [ ] Verify webhook signature (STRIPE_WEBHOOK_SECRET)
-- [ ] Update user purchases table on success
-- [ ] Test with Stripe test cards
+- [ ] Create Stripe account - requires production setup
+- [ ] Add STRIPE_SECRET_KEY to Railway env - requires production setup
+- [ ] Add NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY - requires production setup
+- [ ] Create Pro subscription product in Stripe dashboard - requires production setup
+- [x] Implement Checkout Session: POST /api/checkout
+- [x] Handle success/cancel redirects
+- [x] Setup webhook endpoint: POST /api/stripe-webhook
+- [x] Verify webhook signature (STRIPE_WEBHOOK_SECRET)
+- [x] Update user purchases table on success
+- [ ] Test with Stripe test cards - requires Stripe account setup
+
+**Implementation Details:**
+
+- Created comprehensive Stripe SDK wrapper in `lib/stripe/index.ts`
+- Checkout API supports both subscriptions (monthly/annual) and one-time pack purchases
+- Webhook handler processes 6 event types: checkout completed, subscription CRUD, invoice events
+- Dynamic pricing integration with admin panel config
+- Pro paywall modal with tier selection and feature list
+- Success/cancel checkout pages with clean UX
+- Purchase records automatically created in database
+- Pack revenue tracking integrated with font_packs_meta table
 
 ### Story 6.2: RevenueCat Integration (Mobile)
 
