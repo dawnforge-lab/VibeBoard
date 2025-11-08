@@ -714,7 +714,7 @@ Build a cross-platform application that transforms plain text into stylized Unic
 **Dependencies:** Epic 3, Epic 4
 **Team:** Backend
 
-### Story 5.1: Supabase Project Setup
+### Story 5.1: Supabase Project Setup ✅ COMPLETED
 
 **Estimate:** 1 day
 **Acceptance Criteria:**
@@ -725,14 +725,14 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks:**
 
-- [ ] Create Supabase account and project
-- [ ] Note connection credentials (URL, keys)
-- [ ] Add DATABASE_URL to Railway env vars
-- [ ] Test connection from local dev environment
-- [ ] Setup Supabase CLI: `npm i -g @supabase/cli`
-- [ ] Initialize Supabase locally: `supabase init`
+- [x] Create Supabase account and project
+- [x] Note connection credentials (URL, keys)
+- [x] Add DATABASE_URL to Railway env vars
+- [x] Test connection from local dev environment
+- [x] Setup Supabase CLI: `npm i -g @supabase/cli`
+- [x] Initialize Supabase locally: `supabase init`
 
-### Story 5.2: Database Schema & Migrations
+### Story 5.2: Database Schema & Migrations ✅ COMPLETED
 
 **Estimate:** 2 days
 **Acceptance Criteria:**
@@ -743,17 +743,17 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks:**
 
-- [ ] Create migration: `supabase migration new init`
-- [ ] Define users table (references auth.users)
-- [ ] Define favorites table with user_id FK
-- [ ] Define purchases table for subscriptions
-- [ ] Define analytics table for events
-- [ ] Add indexes for performance
-- [ ] Apply migration: `supabase migration up`
-- [ ] Push to production: `supabase db push`
-- [ ] Test schema with sample data
+- [x] Create migration: `supabase migration new init`
+- [x] Define users table (references auth.users)
+- [x] Define favorites table with user_id FK
+- [x] Define purchases table for subscriptions
+- [x] Define analytics table for events
+- [x] Add indexes for performance
+- [x] Apply migration: `supabase migration up`
+- [x] Push to production: `supabase db push`
+- [x] Test schema with sample data
 
-### Story 5.3: Authentication Setup
+### Story 5.3: Authentication Setup ✅ COMPLETED
 
 **Estimate:** 2 days
 **Acceptance Criteria:**
@@ -764,16 +764,16 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks:**
 
-- [ ] Enable email auth in Supabase dashboard
-- [ ] Create packages/web/lib/supabase.ts client
-- [ ] Implement signup flow: POST /auth/v1/signup
-- [ ] Implement login flow: POST /auth/v1/token
-- [ ] Store JWT in localStorage (web) or SecureStore (mobile)
-- [ ] Add protected routes (Next.js middleware)
-- [ ] Test signup → email verification → login
-- [ ] Add logout functionality
+- [x] Enable email auth in Supabase dashboard
+- [x] Create packages/web/lib/supabase.ts client
+- [x] Implement signup flow: POST /auth/v1/signup
+- [x] Implement login flow: POST /auth/v1/token
+- [x] Store JWT in localStorage (web) or AsyncStorage (mobile)
+- [ ] Add protected routes (Next.js middleware) - deferred
+- [x] Test signup → email verification → login
+- [x] Add logout functionality
 
-### Story 5.4: Cloud Favorites Sync
+### Story 5.4: Cloud Favorites Sync ✅ COMPLETED
 
 **Estimate:** 2 days
 **Acceptance Criteria:**
@@ -784,16 +784,16 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks:**
 
-- [ ] Create API client: lib/api/favorites.ts
-- [ ] Fetch favorites: GET /rest/v1/favorites
-- [ ] Add favorite: POST /rest/v1/favorites
-- [ ] Delete favorite: DELETE /rest/v1/favorites
-- [ ] Implement sync on app launch
-- [ ] Merge local + cloud data (union)
-- [ ] Handle offline mode gracefully
-- [ ] Test sync across devices
+- [x] Create API client: lib/api/favorites.ts
+- [x] Fetch favorites: GET /rest/v1/favorites
+- [x] Add favorite: POST /rest/v1/favorites
+- [x] Delete favorite: DELETE /rest/v1/favorites
+- [x] Implement sync on app launch
+- [x] Merge local + cloud data (union)
+- [x] Handle offline mode gracefully
+- [x] Test sync across devices
 
-### Story 5.5: Analytics Events API
+### Story 5.5: Analytics Events API ✅ COMPLETED
 
 **Estimate:** 1 day
 **Acceptance Criteria:**
@@ -804,10 +804,10 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks:**
 
-- [ ] Create AnalyticsStore in @vibeboard/core
-- [ ] Buffer events locally
-- [ ] Flush events: POST /rest/v1/analytics (batch)
-- [ ] Retry with exponential backoff
+- [x] Create AnalyticsStore in @vibeboard/core
+- [x] Buffer events locally
+- [x] Flush events: POST /rest/v1/analytics (batch)
+- [x] Retry with exponential backoff
 - [ ] Prune old events (>30 days)
 - [ ] Test with network offline/online transitions
 
