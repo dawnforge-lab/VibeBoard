@@ -821,7 +821,7 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Key Principle:** NEVER hardcode content, prompts, or settings that may need to change. All dynamic values must be managed through the admin panel.
 
-### Story 5.5.1: Admin Database Schema Setup
+### Story 5.5.1: Admin Database Schema Setup ✅ COMPLETED
 
 **Estimate:** 2 days
 **Acceptance Criteria:**
@@ -832,20 +832,20 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks:**
 
-- [ ] Create admin_users table with role-based access
-- [ ] Create app_config table for key-value configurations
-- [ ] Create ai_prompts table with version control
-- [ ] Create content_templates table with multi-language support
-- [ ] Create feature_flags table with rollout percentages
-- [ ] Create font_packs_meta table for dynamic pack management
-- [ ] Create system_notifications table for announcements
-- [ ] Create admin_audit_log table for change tracking
-- [ ] Apply Row-Level Security policies to all tables
-- [ ] Seed initial admin user accounts
-- [ ] Write migration: `supabase migration new admin_panel_schema`
-- [ ] Test schema with sample data
+- [x] Create admin_users table with role-based access
+- [x] Create app_config table for key-value configurations
+- [x] Create ai_prompts table with version control
+- [x] Create content_templates table with multi-language support
+- [x] Create feature_flags table with rollout percentages
+- [x] Create font_packs_meta table for dynamic pack management
+- [x] Create system_notifications table for announcements
+- [x] Create admin_audit_log table for change tracking
+- [x] Apply Row-Level Security policies to all tables
+- [x] Seed initial admin user accounts
+- [x] Write migration: `supabase migration new admin_panel_schema`
+- [x] Test schema with sample data
 
-### Story 5.5.2: Admin Authentication & Authorization
+### Story 5.5.2: Admin Authentication & Authorization ✅ COMPLETED
 
 **Estimate:** 1 day
 **Acceptance Criteria:**
@@ -856,14 +856,14 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks:**
 
-- [ ] Create /admin route with middleware protection
-- [ ] Implement role checking middleware
-- [ ] Create admin login page: /admin/login
-- [ ] Add role claim to JWT tokens
-- [ ] Test access with different roles
-- [ ] Add session timeout (30 mins idle)
-- [ ] Implement "Remember Me" functionality
-- [ ] Add 2FA option for super_admins (Phase 2)
+- [x] Create /admin route with middleware protection
+- [x] Implement role checking middleware
+- [x] Create admin login page: /admin/login
+- [x] Add role claim to JWT tokens
+- [x] Test access with different roles
+- [ ] Add session timeout (30 mins idle) - deferred
+- [ ] Implement "Remember Me" functionality - deferred
+- [ ] Add 2FA option for super_admins (Phase 2) - deferred
 
 ### Story 5.5.3: Admin Dashboard UI
 
