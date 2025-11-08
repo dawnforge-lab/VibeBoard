@@ -1089,7 +1089,7 @@ Build a cross-platform application that transforms plain text into stylized Unic
 - [ ] Setup alerts for critical changes (pricing, maintenance mode) - deferred
 - [ ] Test audit trail completeness - deferred
 
-### Story 5.5.11: Client-Side Config API
+### Story 5.5.11: Client-Side Config API ✅ COMPLETED
 
 **Estimate:** 2 days
 **Acceptance Criteria:**
@@ -1103,12 +1103,12 @@ Build a cross-platform application that transforms plain text into stylized Unic
 - [x] Create API route: GET /api/config
 - [x] Fetch configs from app_config table
 - [x] Transform to key-value object
-- [ ] Add caching headers (60s TTL)
-- [ ] Implement client-side caching (React Query or SWR)
-- [ ] Add fallback to hardcoded defaults if API fails
-- [ ] Test config updates propagate to clients
-- [ ] Measure API latency (target: <50ms)
-- [ ] Document all config keys in README
+- [x] Add caching headers (60s TTL)
+- [x] Implement client-side caching (React Query or SWR)
+- [x] Add fallback to hardcoded defaults if API fails
+- [x] Test config updates propagate to clients
+- [x] Measure API latency (target: <50ms)
+- [x] Document all config keys in README
 
 **Client Integration:**
 
