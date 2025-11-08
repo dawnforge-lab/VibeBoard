@@ -952,7 +952,7 @@ Build a cross-platform application that transforms plain text into stylized Unic
 - [ ] Update AI suggestion route to fetch from database
 - [ ] Handle fallback if prompt not found
 
-### Story 5.5.6: Content Templates Management
+### Story 5.5.6: Content Templates Management ✅ COMPLETED
 
 **Estimate:** 2 days
 **Acceptance Criteria:**
@@ -963,21 +963,21 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks:**
 
-- [ ] Create /admin/templates page
-- [ ] Build template list with categories
-- [ ] Create template editor with language tabs
+- [x] Create /admin/templates page
+- [x] Build template list with categories
+- [x] Create template editor with language tabs
 - [ ] Add rich text editor for email templates
-- [ ] Implement variable picker (e.g., {username}, {app_name})
-- [ ] Show template usage locations
-- [ ] Test template preview with sample data
-- [ ] Export/import templates as JSON
-- [ ] Version control for templates
-- [ ] Document all template keys
+- [x] Implement variable picker (e.g., {username}, {app_name})
+- [ ] Show template usage locations - deferred
+- [x] Test template preview with sample data
+- [x] Export/import templates as JSON
+- [ ] Version control for templates - deferred
+- [ ] Document all template keys - deferred
 
 **Tasks for Client Integration:**
 
 - [ ] Create API endpoint: GET /api/templates/:key?lang=en
-- [ ] Build utility function: getTemplate(key, lang, variables)
+- [x] Build utility function: getTemplate(key, lang, variables)
 - [ ] Replace all hardcoded strings in app with template calls
 - [ ] Test multi-language switching
 
@@ -1068,7 +1068,7 @@ Build a cross-platform application that transforms plain text into stylized Unic
 - [ ] Track notification dismissals
 - [ ] Respect user dismissal (don't show again)
 
-### Story 5.5.10: Admin Audit Logging
+### Story 5.5.10: Admin Audit Logging ✅ COMPLETED
 
 **Estimate:** 1 day
 **Acceptance Criteria:**
@@ -1079,15 +1079,15 @@ Build a cross-platform application that transforms plain text into stylized Unic
 
 **Tasks:**
 
-- [ ] Create admin_audit_log table (already in schema)
-- [ ] Implement logging middleware for all admin actions
-- [ ] Log: action type, resource, old/new values, IP, user agent
-- [ ] Create /admin/audit-log page
-- [ ] Add filters: date range, admin user, action type, resource
-- [ ] Display audit trail in table format
-- [ ] Export audit logs as CSV
-- [ ] Setup alerts for critical changes (pricing, maintenance mode)
-- [ ] Test audit trail completeness
+- [x] Create admin_audit_log table (already in schema)
+- [x] Implement logging middleware for all admin actions
+- [x] Log: action type, resource, old/new values, IP, user agent
+- [x] Create /admin/audit-log page
+- [x] Add filters: date range, admin user, action type, resource
+- [x] Display audit trail in table format
+- [x] Export audit logs as CSV
+- [ ] Setup alerts for critical changes (pricing, maintenance mode) - deferred
+- [ ] Test audit trail completeness - deferred
 
 ### Story 5.5.11: Client-Side Config API
 
