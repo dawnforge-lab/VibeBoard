@@ -5,12 +5,17 @@
 
 import Stripe from 'stripe';
 
+// Use placeholder value if env var is not available (for build time)
+const stripeSecretKey = process.env.STRIPE_SECRET_KEY || 'sk_test_placeholder';
+
 if (!process.env.STRIPE_SECRET_KEY) {
-  throw new Error('STRIPE_SECRET_KEY is required');
+  console.warn(
+    'STRIPE_SECRET_KEY not configured. Payment features will be unavailable.'
+  );
 }
 
 // Initialize Stripe with API version
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+export const stripe = new Stripe(stripeSecretKey, {
   apiVersion: '2025-10-29.clover',
   typescript: true,
 });
