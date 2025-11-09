@@ -90,7 +90,7 @@ export async function createPrompt(
   // Get the latest version for this key
   const existingVersions = await getPromptVersions(key);
   const latestVersion =
-    existingVersions.length > 0 ? existingVersions[0].version : 0;
+    existingVersions.length > 0 ? (existingVersions[0]?.version ?? 0) : 0;
   const newVersion = latestVersion + 1;
 
   const { data, error } = await supabase
@@ -284,8 +284,9 @@ export function extractVariables(promptText: string): string[] {
   let match;
 
   while ((match = regex.exec(promptText)) !== null) {
-    if (!variables.includes(match[1])) {
-      variables.push(match[1]);
+    const variable = match[1];
+    if (variable && !variables.includes(variable)) {
+      variables.push(variable);
     }
   }
 

@@ -10,7 +10,7 @@ export default async function AdminAIPromptsPage() {
       if (!acc[prompt.key]) {
         acc[prompt.key] = [];
       }
-      acc[prompt.key].push(prompt);
+      acc[prompt.key]!.push(prompt);
       return acc;
     },
     {} as Record<string, typeof prompts>

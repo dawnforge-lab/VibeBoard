@@ -5,7 +5,7 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 60; // Cache for 60 seconds
 
 export async function GET(
-  request: Request,
+  _request: Request,
   { params }: { params: { key: string } }
 ) {
   try {

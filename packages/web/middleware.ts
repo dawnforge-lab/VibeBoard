@@ -33,7 +33,7 @@ function getClientIdentifier(request: NextRequest): string {
   const realIp = request.headers.get('x-real-ip');
 
   if (forwardedFor) {
-    return forwardedFor.split(',')[0].trim();
+    return forwardedFor.split(',')[0]?.trim() || 'unknown';
   }
 
   if (realIp) {
@@ -74,7 +74,7 @@ function applyRateLimit(
   const pathname = request.nextUrl.pathname;
 
   // Check which rate limit to apply
-  let limitConfig = RATE_LIMITS.public;
+  let limitConfig: { limit: number; windowMs: number } = RATE_LIMITS.public;
 
   if (RATE_LIMITED_ROUTES.auth.test(pathname)) {
     limitConfig = RATE_LIMITS.auth;

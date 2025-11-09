@@ -235,6 +235,12 @@ async function handleSubscriptionUpdated(subscription: Stripe.Subscription) {
         : 'active';
 
   // Update purchase record status
+  // Note: current_period_end exists on Subscription but may not be in all type definitions
+  const currentPeriodEnd =
+    'current_period_end' in subscription
+      ? (subscription as Record<string, unknown>).current_period_end
+      : null;
+
   const { error } = await supabase
     .from('purchases')
     .update({
@@ -242,7 +248,7 @@ async function handleSubscriptionUpdated(subscription: Stripe.Subscription) {
       metadata: {
         ...subscription.metadata,
         subscriptionStatus: subscription.status,
-        currentPeriodEnd: subscription.current_period_end,
+        currentPeriodEnd,
       },
     })
     .eq('stripe_subscription_id', subscription.id);

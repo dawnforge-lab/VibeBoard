@@ -185,8 +185,9 @@ export function extractTemplateVariables(content: string): string[] {
   let match;
 
   while ((match = regex.exec(content)) !== null) {
-    if (!variables.includes(match[1])) {
-      variables.push(match[1]);
+    const variable = match[1];
+    if (variable && !variables.includes(variable)) {
+      variables.push(variable);
     }
   }
 

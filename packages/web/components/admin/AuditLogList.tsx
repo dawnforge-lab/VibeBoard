@@ -293,7 +293,7 @@ function AuditLogRow({ log }: { log: AuditLogEntry }) {
         <tr>
           <td colSpan={6} className="px-6 py-4 bg-gray-50 dark:bg-gray-900/50">
             <div className="space-y-2 text-xs">
-              {log.old_value && (
+              {log.old_value != null && (
                 <div>
                   <span className="font-semibold text-gray-700 dark:text-gray-300">
                     Old Value:
@@ -303,7 +303,7 @@ function AuditLogRow({ log }: { log: AuditLogEntry }) {
                   </pre>
                 </div>
               )}
-              {log.new_value && (
+              {log.new_value != null && (
                 <div>
                   <span className="font-semibold text-gray-700 dark:text-gray-300">
                     New Value:
