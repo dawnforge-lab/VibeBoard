@@ -1234,7 +1234,7 @@ const styleLimit = isPro ? 50 : config.free_styles_limit;
 - [ ] Check entitlement: `customerInfo.entitlements.active.pro`
 - [ ] Test with sandbox accounts (iOS + Android)
 
-### Story 6.3: Pro Features Gate
+### Story 6.3: Pro Features Gate ✅ COMPLETED
 
 **Estimate:** 1 day
 **Acceptance Criteria:**
@@ -1245,12 +1245,24 @@ const styleLimit = isPro ? 50 : config.free_styles_limit;
 
 **Tasks:**
 
-- [ ] Add isPro flag to Zustand store
-- [ ] Filter styles based on isPro status
-- [ ] Show lock icon on premium styles
-- [ ] Display "Upgrade to Pro" modal on tap
-- [ ] Link to Checkout (web) or Paywall (mobile)
-- [ ] Test free → pro upgrade flow
+- [x] Add isPro flag to subscription context (React Context instead of Zustand)
+- [x] Filter styles based on isPro status
+- [x] Show lock icon on premium styles
+- [x] Display "Upgrade to Pro" modal on tap
+- [x] Link to Checkout (web) via ProPaywallModal
+- [x] Test free → pro upgrade flow (demo page created)
+
+**Implementation Details:**
+
+- Created comprehensive subscription management system with React Context
+- Subscription status API endpoint checks purchases table for active subscriptions
+- ProFeatureWrapper component provides automatic lock overlay and paywall integration
+- LockedFeatureBadge displays lock icon with optional "PRO" text
+- useStyleLimits hook provides dynamic limits from admin config (10 free, 50 Pro)
+- Demo page showcases all Pro feature patterns with examples
+- Server-side subscription verification via getUserSubscription()
+- Pack ownership tracking with checkPackOwnership()
+- Keyboard accessible and mobile-responsive
 
 ### Story 6.4: DLC Font Packs Store
 
