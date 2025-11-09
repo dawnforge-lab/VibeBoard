@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import {
   FontPackMeta,
   deleteFontPack,
@@ -85,12 +86,13 @@ export default function FontPackItem({
     <>
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
         {/* Thumbnail */}
-        <div className="aspect-video bg-gray-100 dark:bg-gray-900 flex items-center justify-center">
+        <div className="aspect-video bg-gray-100 dark:bg-gray-900 flex items-center justify-center relative">
           {pack.thumbnail_url ? (
-            <img
+            <Image
               src={pack.thumbnail_url}
               alt={pack.name}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
             />
           ) : (
             <span className="text-6xl">📦</span>
