@@ -1,0 +1,88 @@
+{
+  "id": "kawaii",
+  "name": "Kawaii Cute",
+  "description": "Adorable and cute Japanese-inspired text styles",
+  "category": "aesthetic",
+  "isPremium": true,
+  "price": 0.99,
+  "featured": true,
+  "tags": ["kawaii", "cute", "japanese", "adorable"],
+  "styles": [
+    {
+      "id": "kawaii_bubble",
+      "name": "ⓑⓤⓑⓑⓛⓔ ⓣⓔⓧⓣ",
+      "description": "Cute bubble letters",
+      "preview": "ⓚⓐⓦⓐⓘⓘ ⓥⓘⓑⓔ",
+      "transform": "circled"
+    },
+    {
+      "id": "kawaii_hearts",
+      "name": "♡ h͜͡e͜͡a͜͡r͜͡t͜͡s͜͡ ♡",
+      "description": "Text with heart decorations",
+      "preview": "♡ c͜͡u͜͡t͜͡e͜͡ ♡",
+      "transform": "combining_bridge"
+    },
+    {
+      "id": "kawaii_sparkles",
+      "name": "✧･ﾟ: *✧･ﾟ:* sparkly *:･ﾟ✧*:･ﾟ✧",
+      "description": "Sparkly kawaii text",
+      "preview": "✧ ｍａｇｉｃ ✧",
+      "transform": "fullwidth_decorated"
+    },
+    {
+      "id": "kawaii_pink",
+      "name": "🎀 ριηк тєχт 🎀",
+      "description": "Pink aesthetic script",
+      "preview": "🎀 ѕωєєт 🎀",
+      "transform": "script_cursive"
+    },
+    {
+      "id": "kawaii_flowers",
+      "name": "🌸 f͓̽l͓̽o͓̽w͓̽e͓̽r͓̽y͓̽ 🌸",
+      "description": "Flower-decorated text",
+      "preview": "🌸 b͓̽l͓̽o͓̽s͓̽s͓̽o͓̽m͓̽ 🌸",
+      "transform": "underlined_double"
+    },
+    {
+      "id": "kawaii_stars",
+      "name": "⭐ ₛₜₐᵣᵣy ₜₑₓₜ ⭐",
+      "description": "Tiny starry subscript",
+      "preview": "⭐ ₘₐgᵢc ⭐",
+      "transform": "subscript"
+    },
+    {
+      "id": "kawaii_cloud",
+      "name": "☁ ᶜˡᵒᵘᵈʸ ᵗᵉˣᵗ ☁",
+      "description": "Fluffy cloud superscript",
+      "preview": "☁ ᵈʳᵉᵃᵐʸ ☁",
+      "transform": "superscript"
+    },
+    {
+      "id": "kawaii_wavy",
+      "name": "～ wₐᵥy cᵤₜₑ ～",
+      "description": "Wavy mixed script",
+      "preview": "～ ₛₒ ₖₐwₐᵢᵢ ～",
+      "transform": "mixed_subscript"
+    },
+    {
+      "id": "kawaii_pastel",
+      "name": "🌈 pₐₛₜₑₗ 🌈",
+      "description": "Soft pastel aesthetic",
+      "preview": "🌈 ₛₒfₜ ᵥᵢbₑₛ 🌈",
+      "transform": "mixed_case_sub"
+    },
+    {
+      "id": "kawaii_bunny",
+      "name": "🐰 вυηηү тєχт 🐰",
+      "description": "Bunny-style cute letters",
+      "preview": "🐰 ¢υтє 🐰",
+      "transform": "serif_italic"
+    }
+  ],
+  "metadata": {
+    "author": "VibeBoard Team",
+    "version": "1.0.0",
+    "created": "2025-11-09",
+    "updated": "2025-11-09"
+  }
+}

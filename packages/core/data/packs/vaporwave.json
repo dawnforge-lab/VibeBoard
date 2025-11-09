@@ -1,0 +1,74 @@
+{
+  "id": "vaporwave",
+  "name": "Vaporwave Aesthetic",
+  "description": "Retro-futuristic styles inspired by 80s and 90s internet culture",
+  "category": "aesthetic",
+  "isPremium": true,
+  "price": 0.99,
+  "featured": true,
+  "tags": ["retro", "aesthetic", "90s", "vaporwave"],
+  "styles": [
+    {
+      "id": "vaporwave_fullwidth",
+      "name": "Ｆｕｌｌｗｉｄｔｈ　Ｖａｐｏｒ",
+      "description": "Full-width characters for that classic vaporwave look",
+      "preview": "ＡＥＳＴＨＥＴＩＣ　ＶＩＢＥ",
+      "transform": "fullwidth"
+    },
+    {
+      "id": "vaporwave_outlined",
+      "name": "𝕆𝕦𝕥𝕝𝕚𝕟𝕖𝕕 𝕎𝕒𝕧𝕖",
+      "description": "Double-struck letters for retro text",
+      "preview": "𝕍𝔸ℙ𝕆ℝ𝕎𝔸𝕍𝔼",
+      "transform": "doublestruck"
+    },
+    {
+      "id": "vaporwave_wavy",
+      "name": "w͟a͟v͟y͟ ͟t͟e͟x͟t͟",
+      "description": "Underlined wavy aesthetic",
+      "preview": "r͟e͟t͟r͟o͟ ͟v͟i͟b͟e͟s͟",
+      "transform": "underlined"
+    },
+    {
+      "id": "vaporwave_cyber",
+      "name": "𝓒𝔂𝓫𝓮𝓻 𝓢𝓬𝓻𝓲𝓹𝓽",
+      "description": "Elegant script for cyber aesthetics",
+      "preview": "𝓝𝓮𝓸𝓷 𝓓𝓻𝓮𝓪𝓶𝓼",
+      "transform": "script"
+    },
+    {
+      "id": "vaporwave_glitch",
+      "name": "G҉l҉i҉t҉c҉h҉ ҉T҉e҉x҉t҉",
+      "description": "Glitchy vaporwave effect",
+      "preview": "D҉i҉g҉i҉t҉a҉l҉ ҉N҉o҉s҉t҉a҉l҉g҉i҉a҉",
+      "transform": "combining_chars"
+    },
+    {
+      "id": "vaporwave_neon",
+      "name": "🅽🅴🅾🅽 🆃🅴🆇🆃",
+      "description": "Neon sign style letters",
+      "preview": "🅽🅸🅶🅷🆃 🆅🅸🅱🅴🆂",
+      "transform": "squared"
+    },
+    {
+      "id": "vaporwave_pixel",
+      "name": "🄿🄸🅇🄴🄻 🅃🄴🅇🅃",
+      "description": "Pixelated retro text",
+      "preview": "🅁🄴🅃🅁🄾 🄶🄰🄼🄴",
+      "transform": "circled"
+    },
+    {
+      "id": "vaporwave_vapor",
+      "name": "v a p o r t e x t",
+      "description": "Spaced out vapor aesthetic",
+      "preview": "s u n s e t  v i b e s",
+      "transform": "spaced"
+    }
+  ],
+  "metadata": {
+    "author": "VibeBoard Team",
+    "version": "1.0.0",
+    "created": "2025-11-09",
+    "updated": "2025-11-09"
+  }
+}
