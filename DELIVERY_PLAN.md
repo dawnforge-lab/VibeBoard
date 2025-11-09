@@ -1264,7 +1264,7 @@ const styleLimit = isPro ? 50 : config.free_styles_limit;
 - Pack ownership tracking with checkPackOwnership()
 - Keyboard accessible and mobile-responsive
 
-### Story 6.4: DLC Font Packs Store
+### Story 6.4: DLC Font Packs Store ✅ COMPLETED
 
 **Estimate:** 2 days
 **Acceptance Criteria:**
@@ -1275,14 +1275,28 @@ const styleLimit = isPro ? 50 : config.free_styles_limit;
 
 **Tasks:**
 
-- [ ] Create premium pack JSONs (vaporwave, gothcore, kawaii)
-- [ ] Add price field to pack metadata
-- [ ] Display "Get for $0.99" button
-- [ ] Implement one-time purchase flow
-- [ ] Record purchase in purchases table
-- [ ] Update installed_packs in user storage
-- [ ] Reload packs after purchase
-- [ ] Test purchase → unlock → usage
+- [x] Create premium pack JSONs (vaporwave, gothcore, kawaii)
+- [x] Add price field to pack metadata (already in font_packs_meta from Story 5.5.8)
+- [x] Display "Get for $0.99" button
+- [x] Implement one-time purchase flow
+- [x] Record purchase in purchases table (via webhook from Story 6.1)
+- [x] Update installed_packs in user storage (ownership tracking)
+- [x] Reload packs after purchase
+- [x] Test purchase → unlock → usage
+
+**Implementation Details:**
+
+- Created 3 premium pack JSON files with 8-10 curated styles each
+- Built packs API (/api/packs) with filtering by premium, ownership status
+- Pack store page with grid layout, stats dashboard, and filter tabs
+- PackCard component with thumbnail, badges, tags, and purchase button
+- Integration with existing Stripe checkout for paid packs
+- Free pack instant "installation" flow
+- Ownership tracking displays "Installed" badge
+- Pro upgrade banner for non-Pro users
+- Empty states and loading states
+- Mobile responsive design
+- Revenue and download tracking via webhook
 
 ### Story 6.5: Subscription Management
 
