@@ -1,0 +1,81 @@
+{
+  "id": "gothcore",
+  "name": "Gothcore Dark",
+  "description": "Dark, gothic, and alternative text styles",
+  "category": "aesthetic",
+  "isPremium": true,
+  "price": 0.99,
+  "featured": true,
+  "tags": ["gothic", "dark", "alternative", "emo"],
+  "styles": [
+    {
+      "id": "gothcore_fraktur",
+      "name": "𝔊𝔬𝔱𝔥𝔦𝔠 𝔉𝔯𝔞𝔨𝔱𝔲𝔯",
+      "description": "Classic gothic blackletter",
+      "preview": "𝔇𝔞𝔯𝔨 𝔄𝔢𝔰𝔱𝔥𝔢𝔱𝔦𝔠",
+      "transform": "fraktur"
+    },
+    {
+      "id": "gothcore_bold_fraktur",
+      "name": "𝕭𝖔𝖑𝖉 𝕲𝖔𝖙𝖍",
+      "description": "Bold gothic letters",
+      "preview": "𝕯𝖆𝖗𝖐 𝕾𝖔𝖚𝖑",
+      "transform": "fraktur_bold"
+    },
+    {
+      "id": "gothcore_strikethrough",
+      "name": "S̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶",
+      "description": "Crossed out dark text",
+      "preview": "F̶a̶d̶e̶d̶ ̶M̶e̶m̶o̶r̶i̶e̶s̶",
+      "transform": "strikethrough"
+    },
+    {
+      "id": "gothcore_inverted",
+      "name": "🅸🅽🆅🅴🆁🆃🅴🅳",
+      "description": "Inverted dark squares",
+      "preview": "🅳🅰🆁🅺 🅼🅾🅾🅳",
+      "transform": "negative_squared"
+    },
+    {
+      "id": "gothcore_cursed",
+      "name": "c̴u̴r̴s̴e̴d̴ ̴t̴e̴x̴t̴",
+      "description": "Cursed zalgo-style text",
+      "preview": "d̴a̴r̴k̴ ̴v̴i̴b̴e̴s̴",
+      "transform": "combining_heavy"
+    },
+    {
+      "id": "gothcore_shadow",
+      "name": "𝕤𝕙𝕒𝕕𝕠𝕨 𝕥𝕖𝕩𝕥",
+      "description": "Shadowy double-struck",
+      "preview": "𝕤𝕙𝕒𝕕𝕠𝕨 𝕣𝕖𝕒𝕝𝕞",
+      "transform": "doublestruck"
+    },
+    {
+      "id": "gothcore_bones",
+      "name": "ᗷOᑎY TE᙭T",
+      "description": "Angular bone-like letters",
+      "preview": "ᗪᗩᖇK ᗩEᔕTᕼETIᑕ",
+      "transform": "canadian"
+    },
+    {
+      "id": "gothcore_void",
+      "name": "ꀤꈤ ꓄ꃅꍟ ꃴꂦꀤꀸ",
+      "description": "Void-like mysterious text",
+      "preview": "ꀸꍏꋪꀘ ꍟꈤꍟꋪꁅꌩ",
+      "transform": "yi"
+    },
+    {
+      "id": "gothcore_runes",
+      "name": "ᚱᚢᚾᛁᚲ ᛏᛖᚲᛏ",
+      "description": "Ancient runic style",
+      "preview": "ᛗᚤᛋᛏᛁᚲ ᚹᛟᚱᛞᛋ",
+      "transform": "runic"
+    }
+  ],
+  "metadata": {
+    "author": "VibeBoard Team",
+    "version": "1.0.0",
+    "created": "2025-11-09",
+    "updated": "2025-11-09"
+  }
+}
